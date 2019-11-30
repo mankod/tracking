@@ -16,28 +16,71 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-4c-rQQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YW9-x7-aXE"/>
                                 </connections>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-vE-U8H">
+                                <rect key="frame" x="153" y="797" width="108" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yN0-4F-0Iu" userLabel="Button Stack View">
+                                        <rect key="frame" x="0.0" y="8" width="108" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v71-F6-85C">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="34"/>
+                                                <color key="backgroundColor" red="0.0" green="0.57344603540000005" blue="0.27058163289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Iniciar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0Y-71-rq3"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xp0-MB-0Sy">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="0.0"/>
+                                                <color key="backgroundColor" red="0.99913412329999995" green="0.1138463691" blue="0.14229208230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Terminar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8T-Nj-hoI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="7jY-O8-4zp"/>
+                                    <constraint firstItem="yN0-4F-0Iu" firstAttribute="top" secondItem="6SP-vE-U8H" secondAttribute="topMargin" id="LVP-3r-g6b"/>
+                                    <constraint firstItem="yN0-4F-0Iu" firstAttribute="width" secondItem="6SP-vE-U8H" secondAttribute="width" id="WTU-Rb-KZg"/>
+                                    <constraint firstAttribute="height" constant="50" id="Yn6-La-M2Q"/>
+                                    <constraint firstItem="yN0-4F-0Iu" firstAttribute="centerX" secondItem="6SP-vE-U8H" secondAttribute="centerXWithinMargins" id="zPR-xb-rau"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KHT-4c-rQQ" secondAttribute="trailing" id="BpJ-jv-siI"/>
+                            <constraint firstItem="6SP-vE-U8H" firstAttribute="top" secondItem="KHT-4c-rQQ" secondAttribute="bottom" constant="35" id="Fdj-4X-Lur"/>
                             <constraint firstItem="KHT-4c-rQQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LZ7-WN-5V8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KHT-4c-rQQ" secondAttribute="bottom" id="V9Q-Le-L1Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KHT-4c-rQQ" secondAttribute="bottom" constant="100" id="V9Q-Le-L1Y"/>
                             <constraint firstItem="KHT-4c-rQQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fXV-4V-txi"/>
+                            <constraint firstItem="6SP-vE-U8H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="wEH-p8-IAQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="KHT-4c-rQQ" id="4oN-eq-MJj"/>
+                        <outlet property="startButton" destination="v71-F6-85C" id="UyX-F0-JlG"/>
+                        <outlet property="stopButton" destination="Xp0-MB-0Sy" id="meq-IN-iZ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="118"/>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
 </document>

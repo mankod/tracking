@@ -15,6 +15,10 @@
 		C4290863238F34A000121131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4290862238F34A000121131 /* Assets.xcassets */; };
 		C4290866238F34A100121131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4290864238F34A100121131 /* LaunchScreen.storyboard */; };
 		C4FB9A67239031D70032CE3C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FB9A66239031D70032CE3C /* MapKit.framework */; };
+		C4FB9AA923919B150032CE3C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB9AA823919B150032CE3C /* LocationManager.swift */; };
+		C4FB9AAB2391A1900032CE3C /* routechicagomarathon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */; };
+		C4FB9AAD2391A21F0032CE3C /* Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAC2391A21F0032CE3C /* Route.gpx */; };
+		C4FB9AB32391DA670032CE3C /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C4290865238F34A100121131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4290867238F34A100121131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FB9A66239031D70032CE3C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C4FB9AA823919B150032CE3C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = routechicagomarathon.gpx; sourceTree = "<group>"; };
+		C4FB9AAC2391A21F0032CE3C /* Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Route.gpx; sourceTree = "<group>"; };
+		C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +70,13 @@
 		C4290855238F349E00121131 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				C4FB9AAC2391A21F0032CE3C /* Route.gpx */,
+				C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */,
 				C4290856238F349E00121131 /* AppDelegate.swift */,
+				C4FB9AA823919B150032CE3C /* LocationManager.swift */,
 				C4290858238F349E00121131 /* SceneDelegate.swift */,
 				C429085A238F349E00121131 /* ViewController.swift */,
+				C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */,
 				C429085C238F349E00121131 /* Main.storyboard */,
 				C4290862238F34A000121131 /* Assets.xcassets */,
 				C4290864238F34A100121131 /* LaunchScreen.storyboard */,
@@ -142,6 +154,8 @@
 			files = (
 				C4290866238F34A100121131 /* LaunchScreen.storyboard in Resources */,
 				C4290863238F34A000121131 /* Assets.xcassets in Resources */,
+				C4FB9AAD2391A21F0032CE3C /* Route.gpx in Resources */,
+				C4FB9AAB2391A1900032CE3C /* routechicagomarathon.gpx in Resources */,
 				C429085E238F349E00121131 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +169,8 @@
 			files = (
 				C4290861238F349E00121131 /* Tracking.xcdatamodeld in Sources */,
 				C429085B238F349E00121131 /* ViewController.swift in Sources */,
+				C4FB9AA923919B150032CE3C /* LocationManager.swift in Sources */,
+				C4FB9AB32391DA670032CE3C /* FormatDisplay.swift in Sources */,
 				C4290857238F349E00121131 /* AppDelegate.swift in Sources */,
 				C4290859238F349E00121131 /* SceneDelegate.swift in Sources */,
 			);
@@ -300,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFU97B2RSE;
 				INFOPLIST_FILE = Tracking/Info.plist;
@@ -309,6 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mankod.Tracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFU97B2RSE;
 				INFOPLIST_FILE = Tracking/Info.plist;
@@ -327,6 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mankod.Tracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

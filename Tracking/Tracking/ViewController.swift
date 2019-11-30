@@ -13,32 +13,76 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton:  UIButton!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
+  
     let locationManager = CLLocationManager()
     let regionMeters : Double =  100
     private var locationList: [CLLocation] = []
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
+    private var seconds = 0
+    private var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        statusLocationServices()
+        setupLocationManager()
+    }
+  
+    @IBAction func stopTapped(_ sender: UIButton) {
+        stopRun()
+    }
+    
+    
+    @IBAction func startTapped() {
+        self.startRun()
+    }
+    
+    
+    private func stopRun() {
+     
+      startButton.isHidden = false
+      stopButton.isHidden = true
+      locationManager.stopUpdatingLocation()
+    }
+        
+    private func startRun() {
+        startButton.isHidden = true
+        stopButton.isHidden = false
+        configMap()
+        mapView.removeOverlays(mapView.overlays)
+        seconds = 0
+        distance = Measurement(value: 0, unit: UnitLength.meters)
+        locationList.removeAll()
+        
+        updateDisplay()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+          self.eachSecond()
+        }
+        setupLocationManager()
+    }
+    
+    func eachSecond() {
+      seconds += 1
+      updateDisplay()
+    }
+    
+    func updateDisplay() {
+        let formattedDistance = FormatDisplay.distance(distance)
+        let formattedTime = FormatDisplay.time(seconds)
+        print("Distance:  \(formattedDistance)")
+        print("Time:  \(formattedTime)")
     }
     
     func setupLocationManager() {
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingHeading()
+        locationManager.activityType = .fitness
+        locationManager.distanceFilter = 10
         locationManager.startUpdatingLocation()
-        
-    }
-    
-    func statusLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            //setup our location manager
-            setupLocationManager()
-            statusLocationAuthorization()
-        } else {
-            // show alert letting the user
-        }
+        locationManager.startUpdatingHeading()
     }
     
     func userLocation() {
@@ -49,28 +93,10 @@ class ViewController: UIViewController {
     }
     
     func configMap(){
+        mapView.userTrackingMode = .followWithHeading
         mapView.showsUserLocation = true
         mapView.mapType = MKMapType(rawValue: 0)!
         mapView.userTrackingMode = MKUserTrackingMode.follow
-    }
-    
-    func statusLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedAlways:
-            break
-        case .authorizedWhenInUse:
-            configMap()
-            userLocation()
-            locationManager.startUpdatingLocation()
-        case .denied:
-            break
-        case .restricted:
-            break
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        @unknown default:
-            fatalError()
-        }
     }
 }
 
@@ -95,9 +121,6 @@ extension ViewController: CLLocationManagerDelegate {
              
              locationList.append(newLocation)
            }
-    }
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        statusLocationAuthorization()
     }
 }
 
