@@ -10,15 +10,15 @@
 		C4290857238F349E00121131 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4290856238F349E00121131 /* AppDelegate.swift */; };
 		C4290859238F349E00121131 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4290858238F349E00121131 /* SceneDelegate.swift */; };
 		C429085B238F349E00121131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429085A238F349E00121131 /* ViewController.swift */; };
-		C429085E238F349E00121131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C429085C238F349E00121131 /* Main.storyboard */; };
 		C4290861238F349E00121131 /* Tracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C429085F238F349E00121131 /* Tracking.xcdatamodeld */; };
 		C4290863238F34A000121131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4290862238F34A000121131 /* Assets.xcassets */; };
-		C4290866238F34A100121131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4290864238F34A100121131 /* LaunchScreen.storyboard */; };
 		C4FB9A67239031D70032CE3C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FB9A66239031D70032CE3C /* MapKit.framework */; };
 		C4FB9AA923919B150032CE3C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB9AA823919B150032CE3C /* LocationManager.swift */; };
 		C4FB9AAB2391A1900032CE3C /* routechicagomarathon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */; };
 		C4FB9AAD2391A21F0032CE3C /* Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAC2391A21F0032CE3C /* Route.gpx */; };
 		C4FB9AB32391DA670032CE3C /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */; };
+		DB939A9D239246060079B157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB939A9C239246060079B157 /* Main.storyboard */; };
+		DB939A9F2392461F0079B157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB939A9E2392461E0079B157 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,16 +26,16 @@
 		C4290856238F349E00121131 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4290858238F349E00121131 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C429085A238F349E00121131 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C429085D238F349E00121131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4290860238F349E00121131 /* Tracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tracking.xcdatamodel; sourceTree = "<group>"; };
 		C4290862238F34A000121131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C4290865238F34A100121131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4290867238F34A100121131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4FB9A66239031D70032CE3C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C4FB9AA823919B150032CE3C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = routechicagomarathon.gpx; sourceTree = "<group>"; };
 		C4FB9AAC2391A21F0032CE3C /* Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Route.gpx; sourceTree = "<group>"; };
 		C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		DB939A9C239246060079B157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DB939A9E2392461E0079B157 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +70,11 @@
 		C4290855238F349E00121131 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
-				C4FB9AAC2391A21F0032CE3C /* Route.gpx */,
-				C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */,
-				C4290856238F349E00121131 /* AppDelegate.swift */,
-				C4FB9AA823919B150032CE3C /* LocationManager.swift */,
-				C4290858238F349E00121131 /* SceneDelegate.swift */,
-				C429085A238F349E00121131 /* ViewController.swift */,
-				C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */,
-				C429085C238F349E00121131 /* Main.storyboard */,
-				C4290862238F34A000121131 /* Assets.xcassets */,
-				C4290864238F34A100121131 /* LaunchScreen.storyboard */,
-				C4290867238F34A100121131 /* Info.plist */,
-				C429085F238F349E00121131 /* Tracking.xcdatamodeld */,
+				DB939AA0239247580079B157 /* Views */,
+				DB939A99239245460079B157 /* ViewModels */,
+				DB939A96239245040079B157 /* Resources */,
+				DB939A95239244FB0079B157 /* Controllers */,
+				DB939A94239244E30079B157 /* AppDelegate */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
@@ -92,6 +85,53 @@
 				C4FB9A66239031D70032CE3C /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB939A94239244E30079B157 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C4290858238F349E00121131 /* SceneDelegate.swift */,
+				C4290856238F349E00121131 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DB939A95239244FB0079B157 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C429085A238F349E00121131 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB939A96239245040079B157 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */,
+				C4FB9AAC2391A21F0032CE3C /* Route.gpx */,
+				C4290862238F34A000121131 /* Assets.xcassets */,
+				C429085F238F349E00121131 /* Tracking.xcdatamodeld */,
+				C4290867238F34A100121131 /* Info.plist */,
+				C4FB9AA823919B150032CE3C /* LocationManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB939A99239245460079B157 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DB939AA0239247580079B157 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB939A9E2392461E0079B157 /* LaunchScreen.storyboard */,
+				DB939A9C239246060079B157 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +192,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4290866238F34A100121131 /* LaunchScreen.storyboard in Resources */,
 				C4290863238F34A000121131 /* Assets.xcassets in Resources */,
 				C4FB9AAD2391A21F0032CE3C /* Route.gpx in Resources */,
+				DB939A9D239246060079B157 /* Main.storyboard in Resources */,
+				DB939A9F2392461F0079B157 /* LaunchScreen.storyboard in Resources */,
 				C4FB9AAB2391A1900032CE3C /* routechicagomarathon.gpx in Resources */,
-				C429085E238F349E00121131 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,25 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C429085C238F349E00121131 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C429085D238F349E00121131 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C4290864238F34A100121131 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4290865238F34A100121131 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C4290868238F34A100121131 /* Debug */ = {
