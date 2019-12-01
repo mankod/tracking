@@ -17,6 +17,7 @@
 		C4FB9AAB2391A1900032CE3C /* routechicagomarathon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */; };
 		C4FB9AAD2391A21F0032CE3C /* Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAC2391A21F0032CE3C /* Route.gpx */; };
 		C4FB9AB32391DA670032CE3C /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */; };
+		DB456264239319CA00E18371 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB456263239319CA00E18371 /* CoreDataStack.swift */; };
 		DB939A9D239246060079B157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB939A9C239246060079B157 /* Main.storyboard */; };
 		DB939A9F2392461F0079B157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB939A9E2392461E0079B157 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = routechicagomarathon.gpx; sourceTree = "<group>"; };
 		C4FB9AAC2391A21F0032CE3C /* Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Route.gpx; sourceTree = "<group>"; };
 		C4FB9AB22391DA670032CE3C /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		DB456263239319CA00E18371 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		DB939A9C239246060079B157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DB939A9E2392461E0079B157 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 		C4290855238F349E00121131 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				DB456262239319B100E18371 /* CoreData */,
 				DB939AA0239247580079B157 /* Views */,
 				DB939A99239245460079B157 /* ViewModels */,
 				DB939A96239245040079B157 /* Resources */,
@@ -85,6 +88,14 @@
 				C4FB9A66239031D70032CE3C /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB456262239319B100E18371 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DB456263239319CA00E18371 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		DB939A94239244E30079B157 /* AppDelegate */ = {
@@ -211,6 +222,7 @@
 				C429085B238F349E00121131 /* ViewController.swift in Sources */,
 				C4FB9AA923919B150032CE3C /* LocationManager.swift in Sources */,
 				C4FB9AB32391DA670032CE3C /* FormatDisplay.swift in Sources */,
+				DB456264239319CA00E18371 /* CoreDataStack.swift in Sources */,
 				C4290857238F349E00121131 /* AppDelegate.swift in Sources */,
 				C4290859238F349E00121131 /* SceneDelegate.swift in Sources */,
 			);
@@ -340,7 +352,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFU97B2RSE;
-				INFOPLIST_FILE = Tracking/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tracking/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +372,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFU97B2RSE;
-				INFOPLIST_FILE = Tracking/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tracking/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,22 +9,26 @@
 import Foundation
 
 struct FormatDisplay {
-  static func distance(_ distance: Double) -> String {
-    let distanceMeasurement = Measurement(value: distance, unit: UnitLength.meters)
-    return FormatDisplay.distance(distanceMeasurement)
-  }
-  
-  static func distance(_ distance: Measurement<UnitLength>) -> String {
-    let formatter = MeasurementFormatter()
-    return formatter.string(from: distance)
-  }
-  
-  static func time(_ seconds: Int) -> String {
-    let formatter = DateComponentsFormatter()
-    formatter.allowedUnits = [.hour, .minute, .second]
-    formatter.unitsStyle = .positional
-    formatter.zeroFormattingBehavior = .pad
-    return formatter.string(from: TimeInterval(seconds))!
-  }
+    
+    // MARK: - distance
+    static func distance(_ distance: Double) -> String {
+        let distanceMeasurement = Measurement(value: distance, unit: UnitLength.meters)
+        return FormatDisplay.distance(distanceMeasurement)
+    }
+    
+    // MARK: - distance
+    static func distance(_ distance: Measurement<UnitLength>) -> String {
+        let formatter = MeasurementFormatter()
+        return formatter.string(from: distance)
+    }
+    
+    // MARK: - time
+    static func time(_ seconds: Int) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
+        return formatter.string(from: TimeInterval(seconds))!
+    }
 }
 
