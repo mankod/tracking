@@ -28,8 +28,10 @@ class ViewController: UIViewController {
     private var seconds = 0
     private var timer: Timer?
     
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Tracking"
         setupLocationManager()
     }
     
@@ -47,7 +49,6 @@ class ViewController: UIViewController {
             self.stopTrackSession()
             _ = self.navigationController?.popToRootViewController(animated: true)
         })
-        
         present(alertController, animated: true)
     }
     
