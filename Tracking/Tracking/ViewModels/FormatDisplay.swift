@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct FormatDisplay {
     
@@ -30,5 +31,12 @@ struct FormatDisplay {
         formatter.zeroFormattingBehavior = .pad
         return formatter.string(from: TimeInterval(seconds))!
     }
+    // MARK: - time
+      static func date(_ timestamp: Date?) -> String {
+         guard let timestamp = timestamp as Date? else { return "" }
+         let formatter = DateFormatter()
+         formatter.dateStyle = .medium
+         return formatter.string(from: timestamp)
+       }
 }
 

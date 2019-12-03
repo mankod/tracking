@@ -9,11 +9,12 @@
     <entity name="Tracking" representedClassName="Tracking" syncable="YES" codeGenerationType="class">
         <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Location" inverseName="tracking" inverseEntity="Location"/>
     </entity>
     <elements>
-        <element name="Tracking" positionX="-387.1484375" positionY="-18.7265625" width="128" height="103"/>
         <element name="Location" positionX="-18" positionY="9" width="128" height="103"/>
+        <element name="Tracking" positionX="-387.1484375" positionY="-18.7265625" width="128" height="118"/>
     </elements>
 </model>

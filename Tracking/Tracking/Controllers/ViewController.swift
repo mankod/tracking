@@ -17,8 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton:  UIButton!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var paceLabel: UILabel!
     
     private var tracking: Tracking?
     let locationManager = CLLocationManager()
@@ -27,6 +25,7 @@ class ViewController: UIViewController {
     private var distance = Measurement(value: 0, unit: UnitLength.meters)
     private var seconds = 0
     private var timer: Timer?
+    private var nameTrack : String = ""
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -35,23 +34,34 @@ class ViewController: UIViewController {
         setupLocationManager()
     }
     
-    
     @IBAction func stopTapped(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "End run?",
-                                                message: "Do you wish to end your run?",
+        let alertController = UIAlertController(title: "Final de la ruta",
+                                                message: "¿Deseas finalizar tu recorrido?",
                                                 preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "Guardar", style: .default) { _ in
             self.stopTrackSession()
-            self.saveTrackSession()
+            self.promptForAnswer()
         })
-        alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) { _ in
+        alertController.addAction(UIAlertAction(title: "Descartar", style: .destructive) { _ in
             self.stopTrackSession()
             _ = self.navigationController?.popToRootViewController(animated: true)
         })
         present(alertController, animated: true)
     }
-    
+    func promptForAnswer() {
+        let ac = UIAlertController(title: "Nombre del track a guardar ? ", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+
+        let submitAction = UIAlertAction(title: "OK", style: .default) { [unowned ac] _ in
+            self.nameTrack = ac.textFields![0].text ?? " "
+            self.saveTrackSession()
+        }
+
+        ac.addAction(submitAction)
+        
+        present(ac, animated: true)
+    }
     
     @IBAction func startTapped() {
         self.startTrackSession()
@@ -63,6 +73,7 @@ class ViewController: UIViewController {
         newTrack.distance = distance.value
         newTrack.duration = Int16(seconds)
         newTrack.timestamp = Date()
+        newTrack.name = self.nameTrack
         
         for location in locationList {
             let locationObject = Location(context: CoreDataStack.context)

@@ -12,6 +12,11 @@
 		C429085B238F349E00121131 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429085A238F349E00121131 /* ViewController.swift */; };
 		C4290861238F349E00121131 /* Tracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C429085F238F349E00121131 /* Tracking.xcdatamodeld */; };
 		C4290863238F34A000121131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4290862238F34A000121131 /* Assets.xcassets */; };
+		C49D365923956D6800DFCAE3 /* ActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D365823956D6800DFCAE3 /* ActivitiesListViewController.swift */; };
+		C49D365B2395792E00DFCAE3 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D365A2395792E00DFCAE3 /* TrackCell.swift */; };
+		C49D365F2395C83000DFCAE3 /* TrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D365E2395C83000DFCAE3 /* TrackDetailsViewController.swift */; };
+		C49D36612395C9EA00DFCAE3 /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D36602395C9EA00DFCAE3 /* StoryboardSupport.swift */; };
+		C49D3663239630B100DFCAE3 /* MulticolorPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D3662239630B100DFCAE3 /* MulticolorPolyline.swift */; };
 		C4FB9A67239031D70032CE3C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FB9A66239031D70032CE3C /* MapKit.framework */; };
 		C4FB9AA923919B150032CE3C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB9AA823919B150032CE3C /* LocationManager.swift */; };
 		C4FB9AAB2391A1900032CE3C /* routechicagomarathon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */; };
@@ -30,6 +35,11 @@
 		C4290860238F349E00121131 /* Tracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tracking.xcdatamodel; sourceTree = "<group>"; };
 		C4290862238F34A000121131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4290867238F34A100121131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C49D365823956D6800DFCAE3 /* ActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesListViewController.swift; sourceTree = "<group>"; };
+		C49D365A2395792E00DFCAE3 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		C49D365E2395C83000DFCAE3 /* TrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewController.swift; sourceTree = "<group>"; };
+		C49D36602395C9EA00DFCAE3 /* StoryboardSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
+		C49D3662239630B100DFCAE3 /* MulticolorPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticolorPolyline.swift; sourceTree = "<group>"; };
 		C4FB9A66239031D70032CE3C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C4FB9AA823919B150032CE3C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = routechicagomarathon.gpx; sourceTree = "<group>"; };
@@ -111,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				C429085A238F349E00121131 /* ViewController.swift */,
+				C49D365823956D6800DFCAE3 /* ActivitiesListViewController.swift */,
+				C49D365A2395792E00DFCAE3 /* TrackCell.swift */,
+				C49D365E2395C83000DFCAE3 /* TrackDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -118,10 +131,12 @@
 		DB939A96239245040079B157 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C49D3662239630B100DFCAE3 /* MulticolorPolyline.swift */,
 				C4FB9AAA2391A1900032CE3C /* routechicagomarathon.gpx */,
 				C4FB9AAC2391A21F0032CE3C /* Route.gpx */,
 				C4290862238F34A000121131 /* Assets.xcassets */,
 				C429085F238F349E00121131 /* Tracking.xcdatamodeld */,
+				C49D36602395C9EA00DFCAE3 /* StoryboardSupport.swift */,
 				C4290867238F34A100121131 /* Info.plist */,
 				C4FB9AA823919B150032CE3C /* LocationManager.swift */,
 			);
@@ -219,10 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4290861238F349E00121131 /* Tracking.xcdatamodeld in Sources */,
+				C49D365923956D6800DFCAE3 /* ActivitiesListViewController.swift in Sources */,
+				C49D365F2395C83000DFCAE3 /* TrackDetailsViewController.swift in Sources */,
+				C49D365B2395792E00DFCAE3 /* TrackCell.swift in Sources */,
 				C429085B238F349E00121131 /* ViewController.swift in Sources */,
+				C49D3663239630B100DFCAE3 /* MulticolorPolyline.swift in Sources */,
 				C4FB9AA923919B150032CE3C /* LocationManager.swift in Sources */,
 				C4FB9AB32391DA670032CE3C /* FormatDisplay.swift in Sources */,
 				DB456264239319CA00E18371 /* CoreDataStack.swift in Sources */,
+				C49D36612395C9EA00DFCAE3 /* StoryboardSupport.swift in Sources */,
 				C4290857238F349E00121131 /* AppDelegate.swift in Sources */,
 				C4290859238F349E00121131 /* SceneDelegate.swift in Sources */,
 			);
@@ -360,7 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mankod.Tracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -380,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mankod.Tracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
